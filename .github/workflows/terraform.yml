@@ -1,6 +1,6 @@
 # triggered on push to the main branch
 name: 'Terraform Deploy'
-
+# added comment for PR
 on:
   push:
     branches: [ "main" ]
