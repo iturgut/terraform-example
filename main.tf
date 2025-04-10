@@ -1,10 +1,9 @@
 terraform {
-    cloud {
-        organization = "native-pythons"
-        workspaces {
-            name = "learn-terraform-aws"
-        }
-    }
+  backend "s3" {
+    bucket = "ilaydabuket"
+    key    = "dev/network/terraform.tfstate"
+    region = "us-west-2"
+  }
 
   required_providers {
     aws = {
@@ -12,13 +11,13 @@ terraform {
       version = "~> 4.16"
     }
   }
-
   required_version = ">= 1.2.0"
 }
 
 provider "aws" {
   region = "us-west-2"
 }
+
 
 resource "aws_instance" "app_server" {
   ami           = "ami-08d70e59c07c61a3a"
