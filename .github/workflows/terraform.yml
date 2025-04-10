@@ -29,9 +29,9 @@ jobs:
         role-session-name: GithubActions
 
     - name: Terraform Init
-      working-directory: terraform-example
+      # working-directory: terraform-example
       run: terraform init
 
     - name: Terraform Apply
-      working-directory: terraform-example
+      # working-directory: terraform-example
       run: terraform apply

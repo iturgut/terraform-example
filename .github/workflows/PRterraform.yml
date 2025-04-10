@@ -29,17 +29,17 @@ jobs:
         role-session-name: GithubActions
 
     - name: Terraform Format
-      working-directory: terraform-example
+      # working-directory: terraform-example
       run: terraform fmt
 
     - name: Terraform Init
-      working-directory: terraform-example
+      # working-directory: terraform-example
       run: terraform init
 
     - name: Terraform Validate
-      working-directory: terraform-example
+      # working-directory: terraform-example
       run: terraform validate
 
     - name: Terraform Plan
-      working-directory: terraform-example
+      # working-directory: terraform-example
       run: terraform plan
