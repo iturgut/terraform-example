@@ -29,17 +29,17 @@ jobs:
         role-session-name: GithubActions
 
     - name: Terraform Format
-      working-directory: learn-terraform-aws
+      working-directory: terraform-example
       run: terraform fmt
 
     - name: Terraform Init
-      working-directory: learn-terraform-aws
+      working-directory: terraform-example
       run: terraform init
 
     - name: Terraform Validate
-      working-directory: learn-terraform-aws
+      working-directory: terraform-example
       run: terraform validate
 
     - name: Terraform Plan
-      working-directory: learn-terraform-aws
+      working-directory: terraform-example
       run: terraform plan
